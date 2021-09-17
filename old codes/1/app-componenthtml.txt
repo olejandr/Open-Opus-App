@@ -1,0 +1,46 @@
+<header>
+  <h1>Opus App</h1>
+
+  <input
+    type="text"
+    placeholder="Enter composer's name"
+    [(ngModel)]="search"
+    autofocus
+  />
+</header>
+
+<div class="search-container">
+  <div *ngIf="search.length; else empty">
+    <div *ngFor="let composer of composers | filter: search">
+      <a role="button" (click)="showComposer(composer.complete_name)">
+        {{ composer.complete_name }}
+      </a>
+    </div>
+  </div>
+  <ng-template #empty></ng-template>
+  <hr />
+</div>
+
+<div *ngIf="composer.complete_name; else nocomposer">
+  <div class="composer-card">
+    <p>
+      <b>{{ composer.complete_name | uppercase }}</b>
+    </p>
+
+    <p>({{ composer.birth | date }} <em>-</em> {{ composer.death | date }})</p>
+
+    <p style="font-size: 0.8em">
+      <i>{{ composer.epoch }}</i>
+    </p>
+
+    <div class="work-card" *ngFor="let work of composer.works">
+      <p>
+        {{ work.title }}
+        <small>
+          <i>{{ work.genre }}</i>
+        </small>
+      </p>
+    </div>
+  </div>
+</div>
+<ng-template #nocomposer></ng-template>

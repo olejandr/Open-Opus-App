@@ -1,0 +1,27 @@
+
+:root {
+  font-family: sans-serif;
+}
+.search-container,
+header {
+  padding: 1rem;
+}
+
+
+.composer-card {
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid grey 1px;
+  background-color: #999;
+}
+.work-card {
+  font-size: 0.9rem;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  line-height: 1em;
+  background-color: honeydew;
+  p{
+      margin: .5em;
+  }
+}

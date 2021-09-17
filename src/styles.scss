@@ -1,1 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font-family: "Raleway", sans-serif;
+  // background-color: #73775d;
+  background-color: #9fa580;
+  color: #212;
+}
+
+h1 {
+  // font-family: "Josefin Sans", sans-serif;
+  font-family: 'Italianno', cursive;
+  font-size: 3rem;
+  // text-align: center;
+}
+.search-container,
+header {
+  padding: 1rem;
+  text-align: center;
+  a {
+    transition: font-size 0.2s ease-out;
+  }
+  a:hover {
+    cursor: pointer;
+    font-size: 1.1em;
+    color: rgb(20, 10, 20);
+  }
+  input {
+    text-align: center;
+  }
+}
+
+.composer-name-div {
+  box-sizing: border-box;
+  // height: 1.5rem;
+  
+}
+
+.composer-card {
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid grey 1px;
+  background-color: #999;
+}
+.work-card {
+  font-size: 0.9rem;
+  margin: 0.1rem 0;
+  padding: 0.2rem;
+  line-height: 1em;
+  background-color: honeydew;
+
+  p {
+    margin: 1px;
+    font-weight: 600;
+  }
+}
+
+button {
+  margin: 0.5em;
+}
+
+.chooseGenre {
+  font-size: 0.9rem;
+  mat-radio-button {
+    margin-bottom: 1rem;
+  }
+  
+
+  label {
+    margin-left: 2em;
+  }
+
+  // mat-radio-button {
+  //   margin: .3rem
+  // }
+}
+
+html,
+body {
+  height: 100%;
+}
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
