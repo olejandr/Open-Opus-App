@@ -45,6 +45,7 @@
    
       <mat-radio-group class="chooseGenre" > 
         <label >Choose by genre:</label>
+        <mat-radio-button value="0" (click)="resetWorks()">All works</mat-radio-button>
         <mat-radio-button value="1" (click)="selectStage()">Stage</mat-radio-button>
         <mat-radio-button value="2" (click)="selectOrchestral()">Orchestral</mat-radio-button>
         <mat-radio-button value="3" (click)="selectChamber()">Chamber</mat-radio-button>
