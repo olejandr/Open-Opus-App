@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
 
     setTimeout(()=> {this.composer = this.composers?.find((x: any) => x.complete_name === id);
     this.search = '';
-    this.works = this.composer.works, 100})
+    this.works = this.composer.works}, 100)
 
     
   }
