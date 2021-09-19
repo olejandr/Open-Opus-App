@@ -70,9 +70,12 @@ export class AppComponent implements OnInit {
   }
 
   showComposer(id: string) {
-    this.composer = this.composers?.find((x: any) => x.complete_name === id);
+
+    setTimeout(()=> {this.composer = this.composers?.find((x: any) => x.complete_name === id);
     this.search = '';
-    this.works = this.composer.works
+    this.works = this.composer.works, 100})
+
+    
   }
 
   selectStage() {
