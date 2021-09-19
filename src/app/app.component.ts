@@ -77,30 +77,30 @@ export class AppComponent implements OnInit {
 
   selectStage() {
     
-    this.worksByGenre = this.composer.works?.filter((w: Work) => w.genre === 'Stage');
+    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Stage');
     this.works = this.worksByGenre
   }
 
   selectOrchestral(){
     
-    this.worksByGenre = this.composer.works?.filter((w: Work) => w.genre === 'Orchestral');    
+    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Orchestral');    
     this.works = this.worksByGenre 
   }
 
   selectChamber(){
     
-    this.worksByGenre = this.composer.works?.filter((w: Work) => w.genre === 'Chamber');    
+    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Chamber');    
     this.works = this.worksByGenre  
   }
 
   selectKeyboard(){
-    this.worksByGenre = this.composer.works?.filter((w: Work) => w.genre === 'Keyboard');    
+    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Keyboard');    
     this.works = this.worksByGenre  
     
   }
 
   selectVocal(){
-    this.worksByGenre = this.composer.works?.filter((w: Work) => w.genre === 'Vocal');    
+    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Vocal');    
     this.works = this.worksByGenre  
     
   }
