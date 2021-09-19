@@ -56,17 +56,13 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    
-  }
-
-  loadComposers(){
     this.http
-    .get('https://api.openopus.org/work/dump.json')
-    .subscribe((response) => {
-      this.composersList = response;
+      .get('https://api.openopus.org/work/dump.json')
+      .subscribe((response) => {
+        this.composersList = response;
 
-      this.composers = this.composersList.composers;
-    });
+        this.composers = this.composersList.composers;
+      });
   }
 
   showComposer(id: string) {
