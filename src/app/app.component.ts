@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
 
@@ -59,9 +59,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get('https://api.openopus.org/work/dump.json', {
-        headers: new HttpHeaders({'permissions-policy': 'interest-cohort=()'})
-      })
+      .get('https://api.openopus.org/work/dump.json')
       .subscribe((response) => {
         this.composersList = response;
 
