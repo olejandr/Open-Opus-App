@@ -53,8 +53,6 @@ export class AppComponent implements OnInit {
 
   worksByGenre: Work[] = [];
 
- 
-   
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -64,53 +62,52 @@ export class AppComponent implements OnInit {
         this.composersList = response;
 
         this.composers = this.composersList.composers;
-       
       });
-      
   }
 
   showComposer(id: string) {
-
-    setTimeout(()=> {this.composer = this.composers?.find((x: any) => x.complete_name === id);
+    this.composer = this.composers.find((x: any) => x.complete_name === id);
     this.search = '';
-    this.works = this.composer.works}, 100)
-
-    
+    this.works = this.composer.works;
   }
 
   selectStage() {
-    
-    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Stage');
-    this.works = this.worksByGenre
+    this.worksByGenre =
+      this.composer.works &&
+      this.composer.works.filter((w: Work) => w.genre === 'Stage');
+    this.works = this.worksByGenre;
   }
 
-  selectOrchestral(){
-    
-    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Orchestral');    
-    this.works = this.worksByGenre 
+  selectOrchestral() {
+    this.worksByGenre =
+      this.composer.works &&
+      this.composer.works.filter((w: Work) => w.genre === 'Orchestral');
+    this.works = this.worksByGenre;
   }
 
-  selectChamber(){
-    
-    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Chamber');    
-    this.works = this.worksByGenre  
+  selectChamber() {
+    this.worksByGenre =
+      this.composer.works &&
+      this.composer.works.filter((w: Work) => w.genre === 'Chamber');
+    this.works = this.worksByGenre;
   }
 
-  selectKeyboard(){
-    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Keyboard');    
-    this.works = this.worksByGenre  
-    
+  selectKeyboard() {
+    this.worksByGenre =
+      this.composer.works &&
+      this.composer.works.filter((w: Work) => w.genre === 'Keyboard');
+    this.works = this.worksByGenre;
   }
 
-  selectVocal(){
-    this.worksByGenre = this.composer.works && this.composer.works.filter((w: Work) => w.genre === 'Vocal');    
-    this.works = this.worksByGenre  
-    
+  selectVocal() {
+    this.worksByGenre =
+      this.composer.works &&
+      this.composer.works.filter((w: Work) => w.genre === 'Vocal');
+    this.works = this.worksByGenre;
   }
 
-  resetWorks() { 
-    
-    this.works = this.composer.works
+  resetWorks() {
+    this.works = this.composer.works;
     this.searchWorks = '';
   }
 
